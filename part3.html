@@ -2,19 +2,25 @@
 <html>
 
 	<head>
-		<title>Dating Webpage</title>
+		<title>Dating Website</title>
     <style>
       fieldset{background:lightyellow; border:10px solid yellow; margin-bottom:10px; width:720px}
       label{width: 180px; display: inline-block; text-align: right; vertical-align: top}
       #gender {width: auto}
       #contactmethod {width: auto}
       textarea{width: 360px;height: 50px}
-      range:text{text-align: center; vertical-align: center}
-
+      input{text-align: center; vertical-align: center}
+      #previewtext{vertical-align: top}
+      label:hover { font-size:20px }
+      input:hover { font-size:20px }
+      #rangetextright{background-color: purple; vertical-align: center}
+      #rangetextleft{background-color: red; vertical-align: center}
     </style>
 	</head>
 
-	<body>
+  <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+
+  <body>
     <h1>Please Enter Your Details For Our Dating Website!</h1>
     <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
 
@@ -23,11 +29,11 @@
         <label for="avatar">Your image:</label>
         <input type="file" id="avatar" name="avatar" required> <br>
 
-        Preveiw <img src="avatar" id="preveiw">
+        <dev id="previewtext">Preveiw</dev> <img id="preview">
       </fieldset>
 
       <fieldset>
-        <legend> Your general details </legend>
+        <legend> Your General Details </legend>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required> <br>
         <label for="gender">Gender:</label>
@@ -51,11 +57,11 @@
       </fieldset>
 
       <fieldset>
-        <legend> Your indicators </legend>
+        <legend> Your Indicators </legend>
         <label for="height">Height:</label>
-        Short<input type="range" min="0" max="100" id="height" name="height" step="1" value="50" >Tall <br>
+        <dev id="rangetextleft">Short</dev><input type="range" min="0" max="100" id="height" name="height" step="1" value="50" ><dev id="rangetextright">Tall</dev> <br>
         <label for="salary">Salary:</label>
-        Poor<input type="range" min="0" max="100" id="salary" name="salary" step="1" value="50" >Rich
+        <dev id="rangetextleft">Poor</dev><input type="range" min="0" max="100" id="salary" name="salary" step="1" value="50" ><dev id="rangetextright">Rich</dev>
 
       </fieldset>
 
